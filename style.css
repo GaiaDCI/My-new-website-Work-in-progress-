@@ -1,19 +1,157 @@
+:root {
+  --wrapper-bg-color: #333;
+  --left-bg-color: rgba(223, 39, 39, 0.7);
+  --left-buttonReadMore-hover-color: rgba(161, 11, 11, 0.3);
+  --right-bg-color: rgba(42, 43, 43, 0.8);
+  --right-buttonReadMore-hover-color: rgba(92, 92, 92, 0.3);
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  /* to stay on one line when the mouse over */
+}
+
+.buttonReadMore {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.split.left .buttonReadMore:hover {
+  background-color: var(--left-buttonReadMore-hover-color);
+  border-color: var(--left-buttonReadMore-hover-color);
+}
+
+.split.right .buttonReadMore:hover {
+  background-color: var(--right-buttonReadMore-hover-color);
+  border-color: var(--right-buttonReadMore-hover-color);
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--wrapper-bg-color);
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: url('images/gaia-coffee.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.left:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--left-bg-color);
+}
+
+.split.right {
+  right: 0;
+  background: url('images/gaia-coffee.jpg') center center no-repeat;
+  background-size: cover;
+}
+
+.split.right:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--right-bg-color);
+}
+
+/* EFFECTS */
+.split.left,
+.split.right,
+.split.right:before,
+.split.left:before {
+  transition: var(--speed) all ease-in-out;
+}
+
+/* LEFT */
+.hover-left .left {
+  width: var(--hover-width);
+}
+
+.hover-left .right {
+  width: var(--other-width);
+}
+
+.hover-left .right:before {
+  z-index: 2;
+}
+
+/* RIGHT */
+.hover-right .right {
+  width: var(--hover-width);
+}
+
+.hover-right .left {
+  width: var(--other-width);
+}
+
+.hover-right .left:before {
+  z-index: 2;
+}
+
+@media(max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .buttonReadMore {
+    width: 12rem;
+  }
+}
+
+@media(min-height: 700px) {
+  .buttonReadMore {
+    top: 70%;
+  }
+}
+
+/* code */
 .backgroundcolors,
 .backgroundColorstwo {
   width: 100%;
   height: 100%;
   text-align: center;
   background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
-  /* background: linear-gradient(-45deg, #338aff, #3cf0c5); */
   background-size: 600%;
   -webkit-animation: anime s linear infinite;
   animation: anime 16s linear infinite;
 }
+
 /* .btn2 {
   position: absolute;
   margin-top: -70px;
@@ -26,20 +164,25 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
+
 @keyframes anime {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -48,16 +191,20 @@ body {
 header {
   width: 100%;
   height: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
-  position: fixed;
 }
 
+.home,
 .contact,
 .portfolio {
   font-weight: bold;
   font-size: large;
-  color: white;
+}
+
+.home {
+  color: #000000;
+  position: fixed;
 }
 
 .text-vertical-links {
@@ -68,6 +215,7 @@ header {
 }
 
 .text-vertical-right {
+  color: rgb(255, 255, 255);
   padding-right: 20px;
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -75,21 +223,17 @@ header {
 }
 
 .container {
-  font-family: "Raleway", sans-serif;
   color: white;
   padding-bottom: 250px;
 }
 
 .title {
-  font-size: 130px;
+  font-size: 8rem;
+  font-family: "Raleway", sans-serif;
 }
 
-.subtitle a {
-  padding: 0 5px;
-} 
-
 .linkedinGithub {
-text-align: right:
+  text-align: right;
 }
 
 #button {
@@ -99,9 +243,10 @@ text-align: right:
   width: 130px;
   color: white;
   border-radius: 40px;
-  font-size: 12px;
+  font-size: 0.7rem;
   font-weight: bold;
   cursor: pointer;
+  /* border: #fff solid 0.1rem; */
 }
 
 /* ////////////////////////// OTHER PAGE CONTECT //////////////////////////  */
@@ -118,15 +263,14 @@ text-align: right:
   background-size: 50%;  */
 }
 
-.contactPage {
+.portfolioPage {
   /* background: linear-gradient(to bottom, #ffa63d,#ff3d77); */
-  height:100%;
-  background-color: white;
+  height: 100%;
   justify-content: center;
 }
 
-.contactPageText {
-  font-size: 130px;
+.portfolioText {
+  font-size: 8rem;
   font-family: "Raleway", sans-serif;
   color: black;
   font-size: 70px;
@@ -152,21 +296,47 @@ background-size: 50%; */
   column-count: 3;
   -webkit-column-width: 33%;
   -moz-column-width: 33%;
-  column-width: 33%; }
-  .gallery .pics {
+  column-width: 33%;
+}
+
+.gallery .pics {
   -webkit-transition: all 350ms ease;
-  transition: all 350ms ease; }
-  
-  @media (max-width: 450px) {
+  transition: all 350ms ease;
+}
+
+@media (max-width: 450px) {
   .gallery {
-  -webkit-column-count: 1;
-  -moz-column-count: 1;
-  column-count: 1;
-  -webkit-column-width: 100%;
-  -moz-column-width: 100%;
-  column-width: 100%;
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
   }
-  }
+}
+
+.contactPage {
+  padding: 50px;
+  display: none;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(-45deg, #ffa63d, #ff3d77);
+  background-size: 600%;
+  -webkit-animation: anime s linear infinite;
+  animation: anime 16s linear infinite;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Helvetica";
+}
 
 /* ///////////// */
 /* cuore css
