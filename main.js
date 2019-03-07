@@ -18,14 +18,6 @@ right.addEventListener('mouseleave', () => {
     wrapper.classList.remove('hover-right');
 })
 
-
-
-
-
-
-
-
-
 function Show(id) {
     if (document.getElementById) document.getElementById(id).style.display = "block";
 }

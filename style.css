@@ -1,8 +1,8 @@
 :root {
-  --wrapper-bg-color: #333;
-  --left-bg-color: rgba(223, 39, 39, 0.7);
-  --left-buttonReadMore-hover-color: rgba(161, 11, 11, 0.3);
-  --right-bg-color: rgba(42, 43, 43, 0.8);
+  /* --wrapper-bg-color: rgba(218, 204, 2, 0.7); */
+  /* --left-bg-color: rgba(219, 126, 38, 0.712); */
+  /* --right-bg-color: rgba(42, 43, 43, 0.8); */
+  /* --left-buttonReadMore-hover-color: rgba(161, 11, 11, 0.3); */
   --right-buttonReadMore-hover-color: rgba(92, 92, 92, 0.3);
   --hover-width: 75%;
   --other-width: 25%;
@@ -19,53 +19,36 @@ body {
   overflow-x: hidden;
 }
 
-h1 {
-  font-size: 4rem;
-  color: #fff;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  /* to stay on one line when the mouse over */
-}
-
+/* 
 .buttonReadMore {
   position: absolute;
   left: 50%;
   top: 40%;
   text-decoration: none;
   transform: translateX(-50%);
-}
+} */
 
-.split.left .buttonReadMore:hover {
+/* .split.left .buttonReadMore:hover {
   background-color: var(--left-buttonReadMore-hover-color);
   border-color: var(--left-buttonReadMore-hover-color);
-}
+} */
 
-.split.right .buttonReadMore:hover {
+/* .split.right .buttonReadMore:hover {
   background-color: var(--right-buttonReadMore-hover-color);
   border-color: var(--right-buttonReadMore-hover-color);
-}
+} */
 
-.wrapper {
+/* .wrapper {
   position: relative;
   width: 100%;
   height: 100%;
   background: var(--wrapper-bg-color);
-}
+} */
 
 .split {
   position: absolute;
   width: 50%;
   height: 100%;
-  overflow: hidden;
-}
-
-.split.left {
-  left: 0;
-  background: url('images/gaia-coffee.jpg') center center no-repeat;
-  background-size: cover;
 }
 
 .split.left:before {
@@ -73,13 +56,13 @@ h1 {
   content: "";
   width: 100%;
   height: 100%;
-  background: var(--left-bg-color);
+  /* background: var(--left-bg-color); */
 }
 
 .split.right {
   right: 0;
-  background: url('images/gaia-coffee.jpg') center center no-repeat;
-  background-size: cover;
+  /* background: url('images/gaia-coffee.jpg') center center no-repeat; */
+  /* background-size: cover; */
 }
 
 .split.right:before {
@@ -87,7 +70,7 @@ h1 {
   content: "";
   width: 100%;
   height: 100%;
-  background: var(--right-bg-color);
+  /* background: var(--right-bg-color); */
 }
 
 /* EFFECTS */
@@ -191,8 +174,6 @@ h1 {
 header {
   width: 100%;
   height: 100%;
-  margin-top: 20px;
-  text-align: center;
 }
 
 .home,
@@ -205,6 +186,7 @@ header {
 .home {
   color: #000000;
   position: fixed;
+  padding-left: 25px;
 }
 
 .text-vertical-links {
@@ -230,6 +212,25 @@ header {
 .title {
   font-size: 8rem;
   font-family: "Raleway", sans-serif;
+  color: #ffffff;
+}
+
+.titleSplitPage,
+.textSplitPage {
+  padding: 2rem 3rem 0 4rem;
+}
+
+.titleSplitPage {
+  font-size: 8rem;
+  font-family: "Raleway", sans-serif;
+  color: #000000;
+}
+
+.contactMeHeadline {
+  background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+  background-size: 600%;
+  -webkit-animation: anime s linear infinite;
+  animation: anime 16s linear infinite;
 }
 
 .linkedinGithub {
@@ -249,20 +250,6 @@ header {
   /* border: #fff solid 0.1rem; */
 }
 
-/* ////////////////////////// OTHER PAGE CONTECT //////////////////////////  */
-#content {
-  /* top: 800px;
-  width: 100%;
-  height: 800px;
-  position: relative;
-  border: 2px solid red; */
-  /* background-color: #ff3d77; */
-  /* background-image: url("./images/gaia-coffee.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;  */
-}
-
 .portfolioPage {
   /* background: linear-gradient(to bottom, #ffa63d,#ff3d77); */
   height: 100%;
@@ -277,15 +264,6 @@ header {
   text-align: center;
   padding: 80px;
 }
-
-/* .contactPage img {
-  border: 3px solid  #ff3d77;
-} */
-
-/* background-image: url("./images/gaia-coffee.jpg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: 50%; */
 
 .gallery {
   width: 60%;
@@ -314,252 +292,3 @@ background-size: 50%; */
     column-width: 100%;
   }
 }
-
-.contactPage {
-  padding: 50px;
-  display: none;
-  margin: auto;
-  width: 100%;
-  text-align: center;
-  color: white;
-  position: absolute;
-  font-family: "Raleway", sans-serif;
-  background: linear-gradient(-45deg, #ffa63d, #ff3d77);
-  background-size: 600%;
-  -webkit-animation: anime s linear infinite;
-  animation: anime 16s linear infinite;
-}
-
-.column {
-  float: left;
-  width: 30%;
-  font-size: 1rem;
-  font-weight: bold;
-  font-family: "Helvetica";
-}
-
-/* ///////////// */
-/* cuore css
-a {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-}
-
-svg {
-  cursor: pointer;
-  overflow: visible;
-  width: 60px;
-}
-svg #heart {
-  transform-origin: center;
-  animation: animateHeartOut 0.3s linear forwards;
-}
-svg #main-circ {
-  transform-origin: 29.5px 29.5px;
-}
-
-#checkbox {
-  display: none;
-}
-
-#checkbox:checked + label svg #heart {
-  transform: scale(0.2);
-  fill: #e2264d;
-  animation: animateHeart 0.3s linear forwards 0.25s;
-}
-#checkbox:checked + label svg #main-circ {
-  transition: all 2s;
-  animation: animateCircle 0.3s linear forwards;
-  opacity: 1;
-}
-#checkbox:checked + label svg #grp1 {
-  opacity: 1;
-  transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp1 #oval1 {
-  transform: scale(0) translate(0, -30px);
-  transform-origin: 0 0 0;
-  transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp1 #oval2 {
-  transform: scale(0) translate(10px, -50px);
-  transform-origin: 0 0 0;
-  transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp2 {
-  opacity: 1;
-  transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp2 #oval1 {
-  transform: scale(0) translate(30px, -15px);
-  transform-origin: 0 0 0;
-  transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp2 #oval2 {
-  transform: scale(0) translate(60px, -15px);
-  transform-origin: 0 0 0;
-  transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp3 {
-  opacity: 1;
-  transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp3 #oval1 {
-  transform: scale(0) translate(30px, 0px);
-  transform-origin: 0 0 0;
-  transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp3 #oval2 {
-  transform: scale(0) translate(60px, 10px);
-  transform-origin: 0 0 0;
-  transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp4 {
-  opacity: 1;
-  transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp4 #oval1 {
-  transform: scale(0) translate(30px, 15px);
-  transform-origin: 0 0 0;
-  transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp4 #oval2 {
-  transform: scale(0) translate(40px, 50px);
-  transform-origin: 0 0 0;
-  transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp5 {
-  opacity: 1;
-  transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp5 #oval1 {
-  transform: scale(0) translate(-10px, 20px);
-  transform-origin: 0 0 0;
-  transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp5 #oval2 {
-  transform: scale(0) translate(-60px, 30px);
-  transform-origin: 0 0 0;
-  transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp6 {
-  opacity: 1;
-  transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp6 #oval1 {
-  transform: scale(0) translate(-30px, 0px);
-  transform-origin: 0 0 0;
-  transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp6 #oval2 {
-  transform: scale(0) translate(-60px, -5px);
-  transform-origin: 0 0 0;
-  transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp7 {
-  opacity: 1;
-  transition: 0.1s all 0.3s;
-}
-#checkbox:checked + label svg #grp7 #oval1 {
-  transform: scale(0) translate(-30px, -15px);
-  transform-origin: 0 0 0;
-  transition: 0.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp7 #oval2 {
-  transform: scale(0) translate(-55px, -30px);
-  transform-origin: 0 0 0;
-  transition: 1.5s transform 0.3s;
-}
-#checkbox:checked + label svg #grp2 {
-  opacity: 1;
-  transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp3 {
-  opacity: 1;
-  transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp4 {
-  opacity: 1;
-  transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp5 {
-  opacity: 1;
-  transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp6 {
-  opacity: 1;
-  transition: 0.1s opacity 0.3s;
-}
-#checkbox:checked + label svg #grp7 {
-  opacity: 1;
-  transition: 0.1s opacity 0.3s;
-}
-
-@keyframes animateCircle {
-  40% {
-    transform: scale(10);
-    opacity: 1;
-    fill: #dd4688;
-  }
-  55% {
-    transform: scale(11);
-    opacity: 1;
-    fill: #d46abf;
-  }
-  65% {
-    transform: scale(12);
-    opacity: 1;
-    fill: #cc8ef5;
-  }
-  75% {
-    transform: scale(13);
-    opacity: 1;
-    fill: transparent;
-    stroke: #cc8ef5;
-    stroke-width: 0.5;
-  }
-  85% {
-    transform: scale(17);
-    opacity: 1;
-    fill: transparent;
-    stroke: #cc8ef5;
-    stroke-width: 0.2;
-  }
-  95% {
-    transform: scale(18);
-    opacity: 1;
-    fill: transparent;
-    stroke: #cc8ef5;
-    stroke-width: 0.1;
-  }
-  100% {
-    transform: scale(19);
-    opacity: 1;
-    fill: transparent;
-    stroke: #cc8ef5;
-    stroke-width: 0;
-  }
-}
-@keyframes animateHeart {
-  0% {
-    transform: scale(0.2);
-  }
-  40% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes animateHeartOut {
-  0% {
-    transform: scale(1.4);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
