@@ -61,8 +61,6 @@ body {
 
 .split.right {
   right: 0;
-  /* background: url('images/gaia-coffee.jpg') center center no-repeat; */
-  /* background-size: cover; */
 }
 
 .split.right:before {
@@ -178,15 +176,26 @@ header {
 
 .home,
 .contact,
-.portfolio {
+.portfolio,
+.goBack {
   font-weight: bold;
   font-size: large;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
 }
 
 .home {
-  color: #000000;
   position: fixed;
   padding-left: 25px;
+}
+
+.goBack {
+  padding: 330px 20px;
+}
+
+.text-vertical-links,
+.text-vertical-right {
+    font-family: "Raleway", sans-serif;
 }
 
 .text-vertical-links {
@@ -215,14 +224,38 @@ header {
   color: #ffffff;
 }
 
-.titleSplitPage,
-.textSplitPage {
-  padding: 2rem 3rem 0 4rem;
-}
-
 .titleSplitPage {
   font-size: 8rem;
   font-family: "Raleway", sans-serif;
+  color: #000000;
+}
+
+.titleSplitPage,
+.textSplitPage {
+  padding: 0rem 3rem 0 4rem;
+}
+
+.titleWhite{
+ padding: 150px;
+}
+
+.textSplitPage b {
+  font-family: "Raleway", sans-serif;
+}
+
+.contactInfo {
+  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+}
+
+.inkedinGithub {
+  font-size: 2rem;
+  text-align: center;
+  color: #000000;
+  padding-right: 10px;
+}
+
+.inkedinGithub a {
   color: #000000;
 }
 
@@ -231,10 +264,6 @@ header {
   background-size: 600%;
   -webkit-animation: anime s linear infinite;
   animation: anime 16s linear infinite;
-}
-
-.linkedinGithub {
-  text-align: right;
 }
 
 #button {
