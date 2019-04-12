@@ -38,16 +38,15 @@ body {
   border-color: var(--right-buttonReadMore-hover-color);
 } */
 
-/* .wrapper {
+.wrapper {
   position: relative;
   width: 100%;
-  height: 100%;
-  background: var(--wrapper-bg-color);
-} */
+  /* background: var(--wrapper-bg-color); */
+}
 
 .split {
   position: absolute;
-  width: 50%;
+  width: 30%;
   height: 100%;
 }
 
@@ -55,7 +54,6 @@ body {
   position: absolute;
   content: "";
   width: 100%;
-  height: 100%;
   /* background: var(--left-bg-color); */
 }
 
@@ -67,7 +65,7 @@ body {
   position: absolute;
   content: "";
   width: 100%;
-  height: 100%;
+  height: 700px;
   /* background: var(--right-bg-color); */
 }
 
@@ -181,17 +179,19 @@ header {
   font-weight: bold;
   font-size: large;
   font-family: "Raleway", sans-serif;
-  color: #ffffff;
 }
 
 .home {
   position: fixed;
   padding-left: 25px;
+  color: #000000;
 }
 
 .goBack {
   padding: 330px 20px;
 }
+
+
 
 .text-vertical-links,
 .text-vertical-right {
@@ -213,6 +213,19 @@ header {
   -webkit-transform: none;
 }
 
+
+#button {
+  background-color: rgba(255, 255, 255, 0.3);
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  color: white;
+  border-radius: 40px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .container {
   color: white;
   padding-bottom: 250px;
@@ -232,7 +245,7 @@ header {
 
 .titleSplitPage,
 .textSplitPage {
-  padding: 0rem 3rem 0 4rem;
+  padding: 0rem 1rem 0 4rem;
 }
 
 .titleWhite{
@@ -248,14 +261,18 @@ header {
   font-family: "Raleway", sans-serif;
 }
 
-.inkedinGithub {
-  font-size: 2rem;
+.linkedinGithub {
+  font-size: 1.5rem;
   text-align: center;
   color: #000000;
-  padding-right: 10px;
+  padding: 10px;
 }
 
-.inkedinGithub a {
+.linkedinGithub a {
+  color: #ffffff;
+}
+
+.linkedinGithub a:hover {
   color: #000000;
 }
 
@@ -266,18 +283,6 @@ header {
   animation: anime 16s linear infinite;
 }
 
-#button {
-  background-color: rgba(255, 255, 255, 0.3);
-  height: 40px;
-  text-align: center;
-  width: 130px;
-  color: white;
-  border-radius: 40px;
-  font-size: 0.7rem;
-  font-weight: bold;
-  cursor: pointer;
-  /* border: #fff solid 0.1rem; */
-}
 
 .portfolioPage {
   /* background: linear-gradient(to bottom, #ffa63d,#ff3d77); */
